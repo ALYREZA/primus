@@ -1385,9 +1385,9 @@ module.exports = function base(transformer, pathname, transformer_name) {
 
             expect(body.transformer).to.equal(transformer);
             expect(body.version).to.equal(primus.version);
+            expect(body.pingInterval).to.equal(30000);
             expect(body.pathname).to.equal('/primus');
             expect(body.parser).to.equal('json');
-            expect(body.timeout).to.equal(30000);
             done();
           }
         );
